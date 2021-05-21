@@ -189,6 +189,10 @@ def seat_map_parser_2(file_name):
                     taxes = fee.find(taxes_tag)
                     taxes_amt = float(taxes.attrib.get('Amount'))
                     final_price = taxes_amt + fee_amt
+                    if fee_currency == 'USD':
+                      final_price = "US${:,.2f}".format(final_price)
+                    else:
+                      final_price = "£{:,.2f}".format(final_price)
                 seat_number = summary.attrib.get('SeatNumber')
                 seat = Seat(seat_number, "Seat", final_price,
                             cabin_type, available_ind)
