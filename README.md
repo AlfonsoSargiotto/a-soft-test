@@ -13,7 +13,7 @@ To run the application, you should run the command below, with only 1 flag (it's
 
 - ```python3 seatmap_parser.py --filename seatmap1.xml```
 
-- --file: it's the xml file name. It must be inside the ***data*** folder.
+- **--filename** flag: it's the XML filename. It must be inside the ***data*** folder.
 
 - The output you are going to obtain will be placed in ***/data/output*** folder with the same name of your file but in JSON format.
 
